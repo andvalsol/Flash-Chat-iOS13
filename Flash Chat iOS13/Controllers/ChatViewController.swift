@@ -29,7 +29,16 @@ class ChatViewController: UIViewController {
             messages.append(Message(sender: "ID1", body: messageContent))
             
             tableView.reloadData()
+            
+            scrollToLastPosition()
         }
+        
+        messageTextfield.text = ""
+    }
+    
+    private func scrollToLastPosition() {
+        // Scroll to the last position
+        tableView.scrollToRow(at: IndexPath(row: messages.count - 1, section: 0), at: .top, animated: true)
     }
     
     
