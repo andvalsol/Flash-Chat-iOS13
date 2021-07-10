@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func loginPressed(_ sender: UIButton) {
+        // Log the user in
+        performSegue(withIdentifier: Constants.loginSegue, sender: self)
     }
-    
 }

@@ -14,6 +14,13 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextfield: UITextField!
     
     @IBAction func registerPressed(_ sender: UIButton) {
+        // Check that the email and the password are not nil
+        if let email = emailTextfield.text, let password = passwordTextfield.text {
+            print("Email: \(email)")
+            print("Password: \(password)")
+            
+            // Asume that we have created the user
+            performSegue(withIdentifier: Constants.registerSegue, sender: self)
+        }
     }
-    
 }
